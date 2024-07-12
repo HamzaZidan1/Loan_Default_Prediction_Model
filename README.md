@@ -1,37 +1,20 @@
-# Loan Default Prediction Model
+## Overview
+This repository contains the work I completed during my virtual internship in Quantitative Research at JPMorgan Chase & Co., facilitated through Forage. The project focused on developing a predictive model for assessing credit risks associated with personal loans. The rising default rates on these loans posed a significant challenge, and through this project, I developed a logistic regression model to predict default probabilities based on borrower data.
 
-This Jupyter Notebook presents the development and evaluation of a logistic regression model designed to predict the probability of loan default based on borrower characteristics. The model uses a dataset with details such as credit lines outstanding, loan amount, income, FICO score, and employment history to estimate the risk of default.
+## Project Objective
+The primary objective of this project was to estimate the probability of default on personal loans using historical data, thereby enabling the bank to make informed decisions regarding loan approvals and risk management.
 
-## Dataset Overview
+## Data Description
+The dataset provided by JPMorgan included various borrower characteristics such as income levels, total loans outstanding, FICO scores, and previous default history. Feature engineering was performed to create additional metrics like Debt-to-Income (DTI) and Payment-to-Income (PTI) ratios to better assess the financial health of borrowers.
 
-The dataset includes various features related to borrowers, such as:
-- `customer_id`: Unique identifier for the customer.
-- `credit_lines_outstanding`: Number of credit lines the borrower has.
-- `loan_amt_outstanding`: Current loan amount outstanding.
-- `total_debt_outstanding`: Total debt including the current loan.
-- `income`: Borrower's annual income.
-- `years_employed`: Number of years the borrower has been employed.
-- `fico_score`: FICO score of the borrower.
-- `default`: Indicator if the borrower has defaulted (1) or not (0).
+## Tools and Technologies
+- **Python**: Primary programming language used for data analysis and model building.
+- **Pandas**: Used for data manipulation and cleaning.
+- **Scikit-Learn**: Employed for creating the logistic regression model and evaluating its performance.
+- **Matplotlib**: Utilized for data visualization.
 
-Additional computed features for analysis:
-- `debt_to_income`: Ratio of total debt to annual income.
-- `payment_to_income`: Ratio of loan payment to annual income.
+## Model Description
+A logistic regression model was developed to predict the likelihood of default. The model's performance was evaluated using accuracy and ROC-AUC score, achieving 99% accuracy and a 0.9995 ROC-AUC score, indicating excellent capability in distinguishing between defaulters and non-defaulters.
 
-## Model Development
-
-The model development process includes:
-1. Data preprocessing and feature engineering.
-2. Exploratory data analysis to understand feature distributions and relationships.
-3. Logistic regression model training and validation.
-4. Performance evaluation using metrics such as accuracy, ROC-AUC, precision, recall, and F1-score.
-
-## Files in the Repository
-
-- `Loan_Default_Prediction_Model.ipynb`: Jupyter Notebook containing all the code and analysis.
-- `Task 3 and 4_Loan_Data.csv`: Dataset used for model training and testing.
-
-## Requirements
-
-- Python 3.x
-- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+## Results
+The model demonstrated high reliability in predicting default events, which can significantly aid in enhancing the bank's decision-making process regarding loan approvals and risk mitigation.
